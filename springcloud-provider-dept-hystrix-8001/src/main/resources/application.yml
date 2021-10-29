@@ -1,0 +1,31 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: springcloud-provider-dept
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: lqh88060618
+    url: jdbc:mysql://localhost:3306/springCloud?useSSL=true&useUnicode=true&characterEncoding=utf-8
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+#mybatis:
+#  type-aliases-package: com.lian.springcloud.pojo
+#  mapper-locations: classpath:mybatis/mapper/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7003.com:7003/eureka/,http://eureka7004.com:7004/eureka/
+  instance:
+    instance-id: springcloud-provider-dept-8001
+    prefer-ip-address: true
+info:
+  app.name: KEI_SPRING
+  company.name: LINKEIHAMM
+#  config-location: classpath:mybatis/mybatis-config.xml

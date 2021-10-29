@@ -1,0 +1,7 @@
+server:
+  port: 9001
+#spring:
+#  cloud:
+#    service-registry:
+#      auto-registration:
+#        enabled: false
